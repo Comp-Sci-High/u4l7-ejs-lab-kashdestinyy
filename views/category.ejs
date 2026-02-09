@@ -6,7 +6,7 @@
     <!-- Use the category attribute to set the tab name -->
     <title><%= category %></title>
     <!-- Link to style.css -->
-    
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <div class="header">
@@ -24,14 +24,14 @@
     <div class="section">
       <!-- Modify the following to make one item card for each element of the items array -->
       <!-- You should use the values from data to dynamically populate the image, item name, cost, and path -->
-      
+      <% items.forEach(item => { %>
       <div class="item-card">
         <img src="<%= item.imageUrl %>" />
         <h3><%= item.name %></h3>
         <p>$<%= item.cost %></p>
         <a href="<%= item.path %>">More info</a>
       </div>
-
+<% }) %>
     </div>
   </body>
 </html>
